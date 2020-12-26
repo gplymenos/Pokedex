@@ -1,4 +1,3 @@
-import { ThrowStmt } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { PokemonService } from '../../pokemon.service';
 import { PostService } from '../../post.service';
@@ -10,6 +9,7 @@ import { PostService } from '../../post.service';
 })
 export class PokemonListComponent implements OnInit {
   allPokemon = [];
+  searchText: string = '';
 
   constructor(private postService: PostService, private pokemonService: PokemonService) { }
 
