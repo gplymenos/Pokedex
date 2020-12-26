@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PokemonService } from '../../pokemon.service';
-import { PostService } from '../../post.service';
+import { ModalService } from 'src/app/shared/modal.service';
+import { PokemonService } from '../../shared/pokemon.service';
+import { PostService } from '../../shared/post.service';
 
 @Component({
   selector: 'app-pokemon-list',
@@ -11,7 +12,7 @@ export class PokemonListComponent implements OnInit {
   allPokemon = [];
   searchText: string = '';
 
-  constructor(private postService: PostService, private pokemonService: PokemonService) { }
+  constructor(private postService: PostService, private pokemonService: PokemonService, private modalService: ModalService) { }
 
   ngOnInit() {
     this.postService.fetchAll().subscribe((allPokemon: any) => {
@@ -31,6 +32,7 @@ export class PokemonListComponent implements OnInit {
 
   displayDetails(displayDetails: any) {
     this.pokemonService.currentPokemon.next(displayDetails);
+    this.modalService.modalOpen.next(true);
   }
 
 }

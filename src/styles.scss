@@ -1,2 +1,7 @@
 @import './src/assets/styles/_mixins';
 @import './src/assets/styles/_variables';
+
+
+.modal-dialog {
+    max-width: 625px;
+}

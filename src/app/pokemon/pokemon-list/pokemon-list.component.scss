@@ -6,19 +6,11 @@
   flex-wrap: wrap;
   height: 100%;
   margin-left: -10px;
-  max-height: calc(50vh - 230px);
+  max-height: calc(100vh - 230px);
   overflow-y: auto;
-
-  @include breakpoint('medium') {
-    max-height: calc(100vh - 230px);
-  }
 
   &__item-container {
     padding: 10px;
-
-    // @include breakpoint('medium') {
-    //   width: 25%;
-    // }
   }
 
   &__item {

@@ -6,13 +6,14 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PokemonListComponent } from './pokemon/pokemon-list/pokemon-list.component';
 import { PokemonDetailsComponent } from './pokemon/pokemon-details/pokemon-details.component';
-import { PokemonService } from './pokemon.service';
+import { PokemonService } from './shared/pokemon.service';
 import { FilterPipe } from './shared/filter.pipe';
 import { FormsModule } from '@angular/forms';
 import { PokemonComponent } from './pokemon/pokemon.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { MovesComponent } from './moves/moves.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { MovesComponent } from './moves/moves.component';
   ],
   imports: [
     BrowserModule,
+    NgbModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule

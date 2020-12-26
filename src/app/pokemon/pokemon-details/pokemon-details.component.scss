@@ -30,6 +30,7 @@
     .stat {
       width: 50%;
       text-transform: capitalize;
+      white-space: nowrap;
     }
   }
 
@@ -43,4 +44,17 @@
     top: 0;
     width: 200px;
   }
+}
+
+.modal-header {
+  button {
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.modal-body {
+  padding-right: 200px;
+  min-height: 190px;
 }

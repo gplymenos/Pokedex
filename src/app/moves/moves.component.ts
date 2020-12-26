@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PostService } from '../post.service';
+import { PostService } from '../shared/post.service';
 
 @Component({
   selector: 'app-moves',
