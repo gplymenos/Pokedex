@@ -1,0 +1,49 @@
+@import './src/styles.scss';
+
+.pokemon-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
+  margin-left: -10px;
+  max-height: calc(50vh - 230px);
+  overflow-y: auto;
+
+  @include breakpoint('medium') {
+    max-height: calc(100vh - 230px);
+  }
+
+  &__item-container {
+    padding: 10px;
+
+    // @include breakpoint('medium') {
+    //   width: 25%;
+    // }
+  }
+
+  &__item {
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 10px 0;
+  }
+
+  img {
+    padding: 5px;
+    width: 90px;
+    height: 90px;
+  }
+
+  &__title {
+    text-align: center;
+    text-transform:capitalize;
+  }
+
+  &__search {
+    max-width: 300px;
+    width: 100%;
+  }
+}

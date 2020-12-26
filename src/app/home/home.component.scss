@@ -1,0 +1,42 @@
+.homepage-links {
+  display: flex;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.link {
+  align-items: center;
+  border: 1px solid var(--grey);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+  padding: 40px;
+  width: 180px;
+
+  &:before {
+    content: '';
+    display: block;
+    height: 50px;
+    margin-bottom: 10px;
+    width: 50px;
+  }
+
+  &.pokemon {
+    &:before {
+      background: url('/assets/images/pokeball.jpeg') no-repeat center;
+      background-size: contain;
+    }
+  }
+
+  &.moves {
+    &:before {
+      background: url('/assets/images/attack.jpg') no-repeat center;
+      background-size: contain;
+    }
+  }
+}
+
+
+
+

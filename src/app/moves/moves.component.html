@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-md-12">
+    <p>Moves are the skills of Pokémon in battle. In battle, a Pokémon uses one move each turn. Some moves (including those learned by Hidden Machine)
+    can be used outside of battle as well, usually for the purpose of removing obstacles or exploring new areas.</p>
+  </div>
+  <div class="col-md-12 moves">
+    <div *ngFor="let move of allMoves" class="move">
+      <div class="move__title">{{ move.name }}</div>
+      <div class="move__other_details">
+        <ul>
+          <li>Damage Type: {{ move.damage_class.name }}</li>
+          <li>Accuracy: {{ move.accuracy }}</li>
+          <li>Power: {{ move.power }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+.moves {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.move {
+  border: 1px solid var(--grey);
+  border-radius: 5px;
+  margin: 15px;
+  padding: 10px 15px;
+  position: relative;
+  width: 220px;
+
+  &:before {
+    background-color: var(--grey);
+    content: '';
+    height: 1px;
+    left: 0;
+    position: absolute;
+    top: 50px;
+    width: 100%;
+  }
+
+  &__title {
+    text-transform: capitalize;
+    font-size: 20px;
+    margin-bottom: 25px;
+  }
+
+  &__other_details {
+    ul {
+      padding-left: 20px;
+    }
+  }
+}
+
+

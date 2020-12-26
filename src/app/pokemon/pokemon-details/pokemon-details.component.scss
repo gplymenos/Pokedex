@@ -1,0 +1,46 @@
+.pokemon-details {
+  h2 {
+    margin-bottom: 26px;
+  }
+
+  &__title {
+    text-transform: capitalize;
+
+    .type {
+      font-size: 12px;
+      font-weight: 300;
+      padding-left: 10px;
+      vertical-align: middle;
+    }
+  }
+
+  &__container {
+    border: 1px solid var(--grey);
+    border-radius: 5px;
+    min-height: 200px;
+    padding: 10px 200px 10px 15px;
+    position: relative;
+  }
+
+  &__other {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .stat {
+      width: 50%;
+      text-transform: capitalize;
+    }
+  }
+
+  &__image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80% 80%;
+    height: 200px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 200px;
+  }
+}

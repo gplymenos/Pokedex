@@ -1,0 +1,11 @@
+<div class="form-group pokemon-list__search">
+  <input type="text" class="form-control" id="search" [(ngModel)]="searchText" placeholder="Search by Pokemon name" autofocus>
+</div>
+<div class="pokemon-list">
+  <div class="pokemon-list__item-container" *ngFor="let pokemon of orderById(allPokemon) | appSearch: searchText" >
+    <div class="pokemon-list__item" (click)="displayDetails(pokemon)" data-toggle="modal" data-target="#exampleModal">
+      <div class="pokemon-list__title">{{ pokemon.name }}</div>
+      <img src="{{ pokemon.sprites.other.dream_world.front_default }}"/>
+    </div>
+  </div>
+</div>
